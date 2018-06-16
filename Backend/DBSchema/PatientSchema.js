@@ -1,0 +1,104 @@
+const mongoose       =   require('mongoose');
+var schema           =   mongoose.Schema;
+
+
+var Patientschema = new schema({
+
+    id:{
+        type:String,
+        required:false
+    },
+    title:{
+        type:String,
+        required:true
+    },
+    fullname:{
+        type:String,
+        required:false
+    },
+    othername:{
+        type:String,
+        required:false
+    },
+    dob:{
+        type:String,
+        required:true
+    },
+    gender:{
+        type:String,
+        required:true
+    },
+    cstatus:{
+        type:String,
+        required:false
+    },
+    years:{
+        type:String,
+        required:true
+    },
+    months:{
+        type:String,
+        required:true
+    },
+    days:{
+        type:String,
+        required:false
+    },
+    nic:{
+        type:String,
+        required:true
+    },
+    passport:{
+        type:String,
+        required:false
+    },
+    citizenship:{
+        type:String,
+        required:true
+    },
+    planguage:{
+        type:String,
+        required:false
+    },
+    bloodgrp:{
+        type:String,
+        required:true
+    },
+    add1:{
+        type:String,
+        required:true
+    },
+    add2:{
+        type:String,
+        required:true
+    },
+    village:{
+        type:String,
+        required:true
+    },
+    phone:{
+        type:String,
+        required:true
+    },
+    guadian:{
+        type:String,
+        required:true
+    },
+    guadiantp:{
+        type:String,
+        required:true
+    },
+    remark:{
+        type:String,
+        required:false
+    },
+    allergies:[{
+        alergyName:String,
+        remarks:String,
+        state:String,
+    }]
+
+});
+
+mongoose.model('Patient',Patientschema);
+module.exports = mongoose;
